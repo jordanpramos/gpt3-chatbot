@@ -3,7 +3,7 @@ from twilio.twiml.messaging_response import MessagingResponse
 from jabebot import ask, append_interaction_to_chat_log
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'any-random-string'
+app.config['SECRET_KEY'] = '6164985632-test1'
 
 @app.route('/davidbot', methods=['POST'])
 def david():
