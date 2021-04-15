@@ -18,7 +18,7 @@ def ask(question, chat_log = None):
         engine="davinci",
         prompt=prompt_text,
         temperature=0.8,
-        max_tokens=100,
+        max_tokens=50,
         top_p=1,
         frequency_penalty=0.05,
         presence_penalty=0.6,
@@ -31,6 +31,3 @@ def append_interaction_to_chat_log(question, answer, chat_log=None):
     if chat_log is None: 
         chat_log = session_prompt
         return f'{chat_log}{restart_sequence} {question}{start_sequence}{answer}'
-
-if __name__ == '__main__':
-    print(ask("What's up?"))
